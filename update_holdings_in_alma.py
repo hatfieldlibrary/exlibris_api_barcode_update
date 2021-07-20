@@ -1,14 +1,14 @@
 import csv
 
-from src.alma_api import AlmaRequest
-from src.xml_parsers import Parser
-from src.barcode_util import pad_barcodes
+from modules.alma_api import AlmaRequest
+from modules.xml_parsers import Parser
+from modules.util import pad_barcodes
 import argparse
 
 xml_parser = Parser()
 
 # Manually define path to the data file here.
-data_path = '../data/multiple_holding_test.tsv'
+data_path = 'data/multiple_holding_test.tsv'
 # data_path = '../data/pnca_holdings_results.tsv'
 
 parser = argparse.ArgumentParser(description='Update PNCA barcodes.')
