@@ -8,6 +8,8 @@ Although single purpose the code may be useful for jump-starting future projects
 
 Usage:
 
+Set the path to the data source file in `update_holdings_in_alma.py`.
+
 ```
 Update PNCA barcodes.
 
@@ -15,5 +17,7 @@ optional arguments:
   -h, --help            show this help message and exit
   -key API Key, --api-key API Key
                         Provide the Exlibris API key
+                        
+Example: update_holdings_in_alma.py --api-key=xxxxxx
 
 ```
