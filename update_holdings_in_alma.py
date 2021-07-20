@@ -48,9 +48,9 @@ with open(data_path, 'r') as alma_file:
                     barcode = pad_barcodes(barcode)
                     item.find('./item_data/barcode').text = barcode
                     item_pid = xml_parser.get_item_pid(item)
-                    alma.set_holdings(alma_id, holding_id.text, item_pid, xml_parser.xml_tree_to_string(item))
+                    # alma.set_holdings(alma_id, holding_id.text, item_pid, xml_parser.xml_tree_to_string(item))
                     update_count += 1
 
     print('Records processed: ' + str(record_count))
     print('PNCA holdings processed: ' + str(holdings_count))
-    print('Item records updated: ' + str(update_count))
+    print('Item records (barcodes) updated: ' + str(update_count))
