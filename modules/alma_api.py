@@ -15,8 +15,8 @@ class AlmaRequest:
         # The Exlibris API key is provided as command line argument.
         self.api_key = '?apikey=' + api_key
 
-    # Note that these methods throw error on http response error codes.
-    # But testing for threshold limit, just in case the API doesn't return an error code.
+    # Note that these methods throw an error when http error codes are returned by API.
+    # But test for threshold limit, just in case the API doesn't return an error code.
 
     def get_holdings_records(self, alma_id):
         url = self.__api_get_holdings_path(alma_id)
